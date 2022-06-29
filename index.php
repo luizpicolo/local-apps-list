@@ -13,10 +13,10 @@
   <?php 
     $url = "http://$_SERVER[HTTP_HOST]";
     $array = [
-      ["$url:3000",      'Admin Liz Bot'],
-      ["$url:4567",      'Data Transfer Test'],
-      ["$url:4568/feed", 'Feed IFMS Mastodon'],
-      ["$url:4569",      'MastoBot']
+      ["$url:3000/admin", 'Admin Liz Bot'],
+      ["$url:4567",       'Data Transfer Test'],
+      ["$url:4568/feed",  'Feed IFMS Mastodon'],
+      ["$url:4569",       'MastoBot']
     ]
   ?>
   <?php for ($i = 0; $i < count($array); $i++) { ?>
