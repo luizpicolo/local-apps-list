@@ -1,5 +1,5 @@
 body {
-  background-color: #FFFFF2;
+  background-color: #FFF;
   max-width: 800px;
   margin: 10px auto;
   font-family: 'Roboto', sans-serif;
@@ -11,15 +11,15 @@ h1 {
 }
 
 div {
-  border: 1px solid #000;
+  border: 1px solid #95a5a6;
   padding: 10px;
   margin: 0 6px 6px 6px;
-  background-color: #791e94;
+  background-color: #16a085;
   text-align: center;
   border-radius: 6px;
 }
 
 a {
   text-decoration: none;
-  color: #FFFFF2;
+  color: #FF;
 }
