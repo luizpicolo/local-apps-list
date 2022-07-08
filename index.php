@@ -10,15 +10,25 @@
 </head>
 <body>
   <h1>Local Apps List</h1>
-  <?php 
+  <?php
+    function url($ssl = false, $port = 80, $path = ""){
+      if ($ssl){
+        return "https://$_SERVER[HTTP_HOST]:$port/$path";
+      } else {
+        return "http://$_SERVER[HTTP_HOST]:$port/$path";
+      }
+    }
+  
     $url = "http://$_SERVER[HTTP_HOST]";
     $array = [
-      ["$url:3000/admin", 'Admin Liz Bot'],
-      ["$url:4567",       'Data Transfer Test'],
-      ["$url:4568/feed",  'Feed IFMS Mastodon'],
-      ["$url:4569",       'MastoBot']
+      [url(true, 9443),           'Docker Dashboard'],
+      [url(false, 3000, 'admin'), 'Admin Liz Bot'],
+      [url(false, 4567),          'Data Transfer Test'],
+      [url(false, 4568, 'feed'),  'Feed IFMS Mastodon'],
+      [url(false, 4569),          'MastoBot']
     ]
   ?>
+
   <?php for ($i = 0; $i < count($array); $i++) { ?>
     <a href="<?php echo $array[$i][0] ?>">
       <div><?php echo $array[$i][1] ?></div>
